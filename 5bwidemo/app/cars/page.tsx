@@ -1,10 +1,7 @@
 import React from "react";
-import Card from "../components/ui/cars/Card";
-import { Car } from "@/lib/types/types";
 import CarsList from "../components/ui/cars/CarsList";
+import { Car } from "@/lib/types/types";
 
-
-type Props = {};
 
 const cars: Car[] = [
   {
@@ -54,12 +51,15 @@ const cars: Car[] = [
   }
 ];
 
-export default function page({}: Props)
-{
+export default function Page() {
   return (
-  <div>
-    <CarsList cars={cars}/>
-  </div>
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50 pt-20">
+      <div className="max-w-6xl mx-auto p-8">
+        <div className="bg-white/50 backdrop-blur-sm rounded-xl shadow-lg border border-white/20 p-8">
+          <h1 className="text-4xl mb-8 font-bold text-center text-blue-900">Our Cars Collection</h1>
+          <CarsList cars={cars} />
+        </div>
+      </div>
+    </div>
   );
-  
 }

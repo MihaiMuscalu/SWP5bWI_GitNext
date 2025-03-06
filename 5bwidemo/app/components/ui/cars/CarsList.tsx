@@ -4,14 +4,12 @@ import Card from './Card'
 
 type Props = {cars: Car[]}
 
-export default function CarsList({cars }: Props) {
-    
+export default function CarsList({cars}: Props) {
   return (
     <div>
-         <h1>Cars</h1>
-         <div className='grid grid-cols-2 md:grid-cols-4 gap-4'>
-            {cars.map((car: Car)=><Card key={car.motor.serialNumber} car = {car}/>)}
-         </div>
+      <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6'>
+        {cars.map((car: Car) => <Card key={car.motor.serialNumber} car={car} />)}
+      </div>
     </div>
   )
 }
